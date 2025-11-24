@@ -17,11 +17,6 @@ class Stack:
             return self.items[-1]
     def __len__(self):
         return len(self.items)
-p=Stack()
-p.push(20)
-p.push(67)
-print(p.__len__())
-print(p.is_empty())
-print(p.pop())
+
 
         

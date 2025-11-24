@@ -6,5 +6,4 @@ def qsort(a):
     mid=[x for x in a if x==med]
     rig=[x for x in a if x>med]
     return qsort(le)+mid+qsort(rig)
-a=list(map(int,input().split()))
-print(qsort(a))
+

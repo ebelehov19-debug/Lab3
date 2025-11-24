@@ -5,9 +5,8 @@ def bublesort(a):
             if a[j]>a[j+1]:
                 a[j],a[j+1]=a[j+1],a[j]
                 fl=1
-            if fl==0: break
-            print(*a)
+        if fl==0: break
+            
 
     return a
-a=list(map(int,input().split()))
-print(bublesort(a))
+

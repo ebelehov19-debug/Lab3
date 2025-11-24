@@ -1,4 +1,6 @@
 def radixsort(a:list[int],base: int=10)->list[int]:
+    if not a:
+        return a
     mx=max(a)
     mxl=len(str(mx))
 
@@ -11,7 +13,5 @@ def radixsort(a:list[int],base: int=10)->list[int]:
         for i in b:
             a.extend(i)
     return a
-a=list(map(int,input().split()))
-print(a)
-print(radixsort(a))
+
 
