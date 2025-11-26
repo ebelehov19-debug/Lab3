@@ -6,4 +6,4 @@ def fib(n:int):
     for i in range(n-1):
         a,b=b,a+b
     return b
-print(fib(int(input())))
+
