@@ -1,4 +1,6 @@
-def bublesort(a):
+def bublesort(a:list[int])->list[int]:
+    """ проход по массиву и самый лешкий элемент всплывает 
+    """
     fl=0
     for i in range(len(a)):
         for j in range(0,len(a)-i-1):

@@ -7,8 +7,8 @@ from src.fibandfact.factr import factr
 from src.fibandfact.fib import fib
 from src.fibandfact.fibrec import fibr
 from src.sorts.busket import bucket_sort
+from src.sorts.heap import heapSort
 from src.stack.stinlist import Stack
-
 def main():
     st = Stack()
     print("Приветствую!!! Введите название команды и входные данные. Для получения подробного списка команд напишите help!")   
@@ -22,6 +22,7 @@ def main():
             if a[0] == "help":
                 print("Сначала демонстрируется имя команды потом входные данные потом выходные")
                 print("bublesort list[int]->list[int]")
+                print("heapsort(arr:list[int])")
                 print("countsort list[int]->list[int]")
                 print("radixsort list[int],base: int=10)->list[int] только неотрицательные")
                 print("qsort list[int]->list[int]")
@@ -31,7 +32,7 @@ def main():
                 print('fib int:n->int')
                 print('fibrec int:n->int')
                 print("Список команд для работы со стеком:")
-                print("push <value> - добавить элемент в стек")
+                print("push value - добавить элемент в стек")
                 print("pop - удалить и вернуть верхний элемент")
                 print("peek - посмотреть верхний элемент без удаления")
                 print("len - получить размер стека")
@@ -61,15 +62,16 @@ def main():
                 print(fibr(int(a[1])))
                 
             elif a[0] == 'factorial':
-                print(fact(int(a[1])))
-                
+                print(fact(int(a[1])))     
             elif a[0] == "factorialrec":
-                print(factr(int(a[1])))
-                
+                print(factr(int(a[1])))     
             elif a[0] == 'bucketsort':
                 b = [float(x) for x in a[1:]]
                 print(*bucket_sort(b))
-                
+            elif a[0] == 'heapsort':
+                b=[int(x) for x in a[1:]]
+                heapSort(b)
+                print(*b)           
             elif a[0] == 'pop':
                 try:
                     print(st.pop())
@@ -81,8 +83,7 @@ def main():
                     print("Ошибка: для команды push требуется значение")
                 else:
                     st.push(a[1])
-                    print(a[1])
-                    
+                    print(f'Значение {a[1]} помещено в стек')
             elif a[0] == 'is_empty':
                 print(st.is_empty())
                 
@@ -105,5 +106,5 @@ def main():
         except Exception as e:
             print(f"Неизвестная ошибка: {e}")
 
-if __name__ == "__main__":
+if __name__==main():
     main()

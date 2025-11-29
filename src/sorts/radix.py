@@ -1,4 +1,7 @@
 def radixsort(a:list[int],base: int=10)->list[int]:
+    """
+    создаем несколько корзин и начинаем сортировать числа по последнему разряду 
+    """
     if not a:
         return a
     mx=max(a)
